@@ -17,4 +17,9 @@ const summariseUser = (userName, userAge, userHasHobbies) => {
   );
 };
 
+// Quick Implementation of an arrow function
+const addOne = (a) => a + 1;
+
+console.log(addOne(1));
+
 console.log(summariseUser(name, age, hasHobbies));
