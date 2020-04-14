@@ -1,9 +1,9 @@
-const http = require("http");
-const routes = require("./routes");
+const fs = require("fs");
 
-const server = http.createServer(routes);
-server.listen(3000);
-if (url === "/") {
+const requestHandler = (req, res) => {
+  const url = req.url;
+  const method = req.method;
+  if (url === "/") {
     res.write("<html>");
     res.write("<head><title>Enter Message</title></head>");
     res.write(
@@ -34,3 +34,6 @@ if (url === "/") {
   res.write("<body><h1> This is the first page </h1> </body>");
   res.write("</html>");
   res.end();
+};
+
+module.exports = requestHandler;
