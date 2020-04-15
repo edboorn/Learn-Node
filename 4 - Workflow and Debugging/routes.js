@@ -25,6 +25,7 @@ const requestHandler = (req, res) => {
         res.statusCode = 302;
         res.setHeader("Location", "/");
         return res.end();
+
       });
     });
   }
@@ -37,3 +38,4 @@ const requestHandler = (req, res) => {
 };
 
 module.exports = requestHandler;
+module.exports = {someText : "Server is running"}
