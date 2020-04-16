@@ -9,6 +9,7 @@ const adminRoutes = require('./routes/admin');
 const shopRoutes = require('./routes/shop');
 //General request middlewares
 app.use(bodyParser.urlencoded({extended : true}));
+app.use(express.static(path.join(__dirname, 'public'))); //Style Import
 
 // Route handling middlewares
 app.use('/admin',adminRoutes); //All admin routes now start with /admin
