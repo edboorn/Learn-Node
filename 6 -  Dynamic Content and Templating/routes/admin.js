@@ -6,7 +6,7 @@ const rootDir = require("../helpers/path");
 const products = [];
 
 router.get("/add-product", (req, res, next) => {
-  res.render('add-product', { docTitle : "Add Product"})
+  res.render('add-product', { docTitle : "Add Product", path: '/admin/add-product'})
 });
 
 // Filters the url to only show for post requests
