@@ -22,7 +22,7 @@ app.use(shopRoutes);
 //Catchall 404 page not found error
 app.use((req,res,next) => { 
     //Can chain a bunch of different res. methods, send just has to be the last
-    res.status(404).sendFile(path.join(__dirname ,'views', '404.html'));
+    res.status(404).render('404', { docTitle : "404 - Page Not Found"})
 });
 
 app.listen(3000);
