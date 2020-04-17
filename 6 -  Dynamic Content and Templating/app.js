@@ -1,11 +1,13 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const path = require('path');
-
+const expressHbs = require('express-handlebars')
 const app = express();
 
+
 //Set a global configuration value
-app.set('view engine', 'pug'); // Telling express which templating engine I'm using
+app.engine('handlebars', expressHbs({layoutsDir: 'views/layouts', defaultLayout: 'main-layout'}));
+app.set('view engine', 'handlebars'); // Telling express which templating engine I'm using
 app.set('views', 'views');
 // My Routes
 const adminData = require('./routes/admin');
