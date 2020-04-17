@@ -4,15 +4,18 @@ const path = require('path');
 
 const app = express();
 
+//Set a global configuration value
+app.set('view engine', 'pug'); // Telling express which templating engine I'm using
+app.set('views', 'views');
 // My Routes
-const adminRoutes = require('./routes/admin');
+const adminData = require('./routes/admin');
 const shopRoutes = require('./routes/shop');
 //General request middlewares
 app.use(bodyParser.urlencoded({extended : true}));
 app.use(express.static(path.join(__dirname, 'public'))); //Style Import
 
 // Route handling middlewares
-app.use('/admin',adminRoutes); //All admin routes now start with /admin
+app.use('/admin',adminData.routes); //All admin routes now start with /admin
 app.use(shopRoutes);
 
 
