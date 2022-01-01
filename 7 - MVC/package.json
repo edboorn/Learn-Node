@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "acorn": "^7.1.1",
-    "body-parser": "^1.19.0",
+    "body-parser": "^1.19.1",
     "ejs": "^3.0.2",
     "express": "^4.17.1",
     "express-handlebars": "^3.0.2",
